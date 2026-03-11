@@ -24,27 +24,10 @@ Paid weighting: probability of the next selected advertiser co-relates to how mu
 **2.2.** 
 Companies will have different amount of ad messages. Make sure to rotate their ads independently and that all of their ads will have be shown at some point. This should be sequential and not randomly generated.
 
-### 3. Proper initialization of hd44780
-The team has already written a part of the driver for the company's LCD driver. You need to finish the initialization in the hd44780 constructor.
-
+### 3. hd44780 blink effect
+The team has already written a part of the driver for the company's LCD driver. You need to finish it
 **lcd_driver.cpp**
-```cpp
-hd44780::hd44780() {
-    /* TASK
-    Set up all the pins used for the program. Look at the wokwi
-    sketch and compare to a pinout diagram for Arduino Uno R3.
-    Use the definitions from lcd_driver.hpp
-    */
-    
-    /* TASK
-    Set the pins LCD_E and LCD_RS to low.
-    */
 
-    [ ... Initialization Sequence ...]
-}
-```
-
-### 4. Create a blink effect
 Some of the companies want to blink their ad messages, therefore we need to implement a blinking effect on the hd44780. Make use of the `#defines` from `lcd_driver.hpp` and finish the `blink_text()` method.
 
 **lcd_driver.cpp**
@@ -65,10 +48,6 @@ Non-business logic requirements for the system.
 ### 1. No heap allocated memory
 Because of the small RAM, the program should only use the stack.
 
-### 2. No blocking delays
-The program should always be able to call an ISR at any given time.
-
----
 
 ## Deliverable Requirements
 Requirements on how the codebase should be delivered.
